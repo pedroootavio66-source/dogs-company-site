@@ -52,6 +52,7 @@
 .review-nav:disabled{opacity:.35;cursor:default}.review-nav:focus-visible,.review-dots button:focus-visible{outline:3px solid var(--orange);outline-offset:3px}.review-dots{display:flex;justify-content:center;gap:8px;margin-top:16px}.review-dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:#c9c0b7;cursor:pointer}.review-dots button:hover{background:var(--orange)}
 .specialty-icon svg,.round-icon svg,.quick-actions b svg,.reception-symbol svg,.groom-symbol svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.quick-actions b,.reception-symbol,.groom-symbol{display:grid;place-items:center}.experience-icon{font-style:normal;font-size:13px;letter-spacing:.04em}
 .specialty-icon i.fi,.round-icon i.fi,.quick-actions b i.fi{font-size:21px;line-height:1}.quick-actions b i.fi{display:block}.icon-credit{font-size:11px;color:#9ca5ae}.icon-credit a{color:inherit}
+
 .service-promise{min-height:380px;align-items:center;justify-content:center;padding:32px}.service-promise>img{width:clamp(230px,24vw,290px);height:auto;max-width:100%;flex:0 1 auto;object-fit:contain}
 @media(max-width:520px){.service-promise{min-height:330px;padding:24px}.service-promise>img{width:250px;max-width:100%}}
 
@@ -187,4 +188,30 @@
   .service-accordion h2{font-size:16px}
   .experience article{padding:14px}
   .experience h3{font-size:19px}
+}
+
+/* Last mobile override: intentionally follows legacy rules so narrow screens keep the new layout. */
+@media(max-width:560px){
+  .benefit-row,.stat-row,.benefits-wide,.groom-benefits,.service-accordion,
+  .specialties-grid,.specialties-home-grid,.experience,.service-topic-grid,.other-specialties{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px
+  }
+  .benefit:last-child{grid-column:auto}
+  .benefit,.stat,.benefits-wide .benefit,.groom-benefits .benefit{min-width:0;border:1px solid var(--line);border-radius:18px 8px 18px 8px;background:#fff;padding:14px 12px}
+  .benefit:nth-child(even),.stat:nth-child(even){border-radius:8px 18px 8px 18px}
+  .benefit{display:block}.benefit .round-icon{margin-bottom:10px;width:36px;height:36px}.benefit h3{font-size:13px;line-height:1.2}.benefit p{font-size:11px;line-height:1.4}
+  .stat{display:flex;align-items:center;justify-content:flex-start;gap:9px;padding:12px 10px}.stat .round-icon{width:34px;height:34px;font-size:16px}.stat b{font-size:13px}.stat span{font-size:10px;line-height:1.3}
+  .service-accordion details,.service-accordion summary{min-height:205px}.service-accordion details{border-radius:20px 8px 20px 8px;box-shadow:0 8px 22px #16202f0d}.service-accordion details:nth-child(even){border-radius:8px 20px 8px 20px}
+  .service-accordion summary{padding:15px}.service-accordion h2{font-size:clamp(16px,4.8vw,19px);line-height:1.08}.service-accordion p{font-size:11px;line-height:1.4}.service-accordion details>ul{padding:12px 12px 15px 27px;font-size:11px}
+  .specialty-card{padding:15px;min-width:0;border-radius:20px 8px 20px 8px}.specialty-card:nth-child(even){border-radius:8px 20px 8px 20px}.specialty-card h2,.specialty-card h3{font-size:17px;line-height:1.12}.specialty-card p{font-size:11px;line-height:1.4}
+  .experience article{min-height:190px;padding:15px;border-radius:20px 8px 20px 8px}.experience article:nth-child(even){border-radius:8px 20px 8px 20px}.experience h3{font-size:19px;line-height:1.08;margin:22px 0 8px}.experience p{font-size:11px;line-height:1.45}
+  .feature-gallery.no-photo{grid-template-columns:minmax(0,1fr);gap:22px}.service-promise{min-height:0;min-width:0;padding:12px;background:#ffffff10;border:1px solid #ffffff35;border-radius:22px;overflow:hidden}
+  .service-promise>img{display:block;width:min(100%,310px);height:auto;max-height:310px;object-fit:contain;margin:auto}
+  .gallery-strip,.groom-gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;padding:2px 1px 12px}
+  .gallery-strip::-webkit-scrollbar,.groom-gallery::-webkit-scrollbar{display:none}
+  .gallery-strip img,.groom-gallery img,.groom-gallery img:first-child{flex:0 0 72%;height:190px;grid-column:auto;grid-row:auto;scroll-snap-align:start}
+  .groom-grid>.groom-gallery{display:block;width:100%;max-width:none}.groom-grid>.groom-gallery img,.groom-grid>.groom-gallery img:first-child{width:100%;height:auto;aspect-ratio:1/1}
+}
+@media(max-width:380px){
+  .benefit-row,.stat-row{gap:8px;padding:6px}.benefit,.stat{padding:11px 9px}.service-accordion{gap:9px}.service-accordion summary{padding:12px}.service-accordion h2{font-size:16px}
 }
