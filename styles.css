@@ -243,4 +243,5 @@ img{height:auto}
   #servicos .feature-gallery .title,
   .service-accordion h2,
   .service-accordion p{hyphens:none;word-break:normal;overflow-wrap:normal}
+  .benefit h3,.benefit p{hyphens:none;word-break:normal;overflow-wrap:normal}
 }
