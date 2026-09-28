@@ -238,4 +238,9 @@ img{height:auto}
   .benefit,.stat,.service-accordion details,.specialty-card,.experience article{overflow-wrap:anywhere;word-break:normal}
   .benefit h3,.benefit p,.stat b,.stat span,.service-accordion h2,.service-accordion p,.specialty-card h2,.specialty-card h3,.specialty-card p,.experience h3,.experience p{min-width:0;overflow-wrap:anywhere;hyphens:auto}
   .hero-bar{width:var(--wrap);max-width:100%;min-width:0}
+  #servicos-lista .page-head .title,
+  #servicos-lista .page-head .title strong,
+  #servicos .feature-gallery .title,
+  .service-accordion h2,
+  .service-accordion p{hyphens:none;word-break:normal;overflow-wrap:normal}
 }
