@@ -215,3 +215,27 @@
 @media(max-width:380px){
   .benefit-row,.stat-row{gap:8px;padding:6px}.benefit,.stat{padding:11px 9px}.service-accordion{gap:9px}.service-accordion summary{padding:12px}.service-accordion h2{font-size:16px}
 }
+
+/* Final fit and legibility fixes from the mobile review prompt */
+html,body{max-width:100%;overflow-x:clip}
+img{height:auto}
+.site-header,.nav-wrap,.footer-grid,.contact-brand-visual{min-width:0;overflow:visible}
+.brand,.footer-brand,.contact-brand-visual img{display:block;max-width:100%;object-fit:contain}
+@media(max-width:560px){
+  .brand{width:min(40vw,142px);height:48px;max-height:48px;object-position:left center;flex:0 1 auto}
+  .menu-button{flex:none;padding:8px 0 8px 12px;line-height:1}
+  .nav-wrap{gap:12px}
+  .footer-brand{width:min(100%,170px);height:62px;object-position:left center}
+  .benefit-row .benefit:last-child:nth-child(odd),
+  .service-accordion details:last-child:nth-child(odd){grid-column:1/-1}
+  .benefit-row .benefit:last-child:nth-child(odd){display:flex;align-items:center;gap:12px}
+  .benefit-row .benefit:last-child:nth-child(odd) .round-icon{flex:0 0 36px;margin:0}
+  .benefit-row .benefit:last-child:nth-child(odd) h3{margin-top:0}
+  .service-promise{width:100%;min-height:0;padding:16px}
+  .service-promise>img{width:min(100%,340px);max-width:100%;height:auto;max-height:none;object-fit:contain;object-position:center}
+  .contact-brand-visual{width:100%}
+  .contact-brand-visual img{width:min(100%,260px);height:auto}
+  .benefit,.stat,.service-accordion details,.specialty-card,.experience article{overflow-wrap:anywhere;word-break:normal}
+  .benefit h3,.benefit p,.stat b,.stat span,.service-accordion h2,.service-accordion p,.specialty-card h2,.specialty-card h3,.specialty-card p,.experience h3,.experience p{min-width:0;overflow-wrap:anywhere;hyphens:auto}
+  .hero-bar{width:var(--wrap);max-width:100%;min-width:0}
+}
